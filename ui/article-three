@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Article Three</title>
+    </head>
+    
+    <body>
+        <div>
+            <a href="/"> Home </a>
+        </div>
+        <hr/>
+        <div>
+            <h3> My Third Article</h3>
+        </div>
+        <div>
+            Sep 7 2017 2:45PM
+        </div>
+        
+        <div>
+            <p> This is my third article. Further about travel..travel.</p>
+            
+            <p>
+                Travel makes one modest. You see what a tiny place you occupy in the world.
+                – Gustave Flaubert
+            </p>
+            <p>
+              I am not the same, having seen the moon shine on the other side of the world.
+              – Mary Anne Radmacher
+            </p>
+        </div>
+    </body>
+    
+</html>
