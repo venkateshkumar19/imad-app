@@ -21,6 +21,7 @@ var articleOne={
             
             <p> It is better to be hated for what you are than to be loved for what you are not </p>
             `
+};
             function createTemplate(data)
             {
                 var title=data.title;
@@ -63,13 +64,11 @@ var articleOne={
             `;
             return htmlTemplate;
             
-            
-                
             }
 
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.send(createTemplate(articleOne));
 });
 
 app.get('/article-one', function (req, res){
