@@ -5,7 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
+var articles=
+{
+    'article-one':{
     title: 'Article One',
     heading: 'My First Article',
     date: 'Sep 7 2017',
@@ -21,6 +23,45 @@ var articleOne={
             
             <p> It is better to be hated for what you are than to be loved for what you are not </p>
             `
+    },
+    'article-two':{
+    title: 'Article Two',
+    heading: 'My Second Article',
+    date: 'Sep 7 2017 2:35PM',
+    content:
+           `
+           <p> This is my second article. Topic is about travel.</p>
+            
+            <p>
+                For my part, I travel not to go anywhere, but to go. I travel for travel’s sake. The great affair is to move.
+                Robert Louis Stevenson
+            </p>
+            
+            <p> 
+            We travel, some of us forever, to seek other places, other lives, other souls.” <br> - Anais Nin 
+            </p>
+            `
+        
+    },
+    'article-thre':{
+    title: 'Article Three',
+    heading: 'My Third Article',
+    date: 'Sep 7 2017 2:45PM',
+    content:
+           `
+           <p> This is my third . Further about travel..travel.</p>
+            
+            <p>
+                Travel makes one modest. You see what a tiny place you occupy in the world.
+                – Gustave Flaubert
+            </p>
+            <p>
+              I am not the same, having seen the moon shine on the other side of the world.
+              – Mary Anne Radmacher
+            </p>
+            `
+        
+    },
 };
             function createTemplate(data)
             {
