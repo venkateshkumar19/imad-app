@@ -5,6 +5,58 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+    title: 'Article One',
+    heading: 'My First Article',
+    date: 'Sep 7 2017',
+    content:
+           `
+           <p> This is my first article. Live and let's others live.</p>
+            
+            <p>
+                Love like you'll never be hurt,<br>
+                Sing like there's nobody listening,<br>
+                And live like it's heaven on earth.<br>
+            </p>
+            
+            <p> It is better to be hated for what you are than to be loved for what you are not </p>
+            `
+            var htmlTemplate=
+            `
+            <html>
+    <head>
+        <title>Article One</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+    
+    <body>
+        <div class="container">
+            
+            <div>
+            <a href="/"> Home </a>
+        </div>
+        <hr/>
+        <div>
+            <h3> My First Article</h3>
+        </div>
+        <div>
+            Sep 7 2017
+        </div>
+        
+        <div>
+            ${content}
+        </div>
+        
+        </div>
+    </body>
+    
+</html>
+            `
+    
+    
+};
+
 var content={
     title: Article One;
     heading: 
