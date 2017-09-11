@@ -21,11 +21,19 @@ var articleOne={
             
             <p> It is better to be hated for what you are than to be loved for what you are not </p>
             `
-            var htmlTemplate=
+            function createTemplate(data)
+            {
+                var title=data.title;
+                var heading=data.heading;
+                var date=data.date;
+                var content=data.content;
+                
+                
+                var htmlTemplate=
             `
             <html>
     <head>
-        <title>Article One</title>
+        <title> ${title} </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="/ui/style.css" rel="stylesheet" />
         </head>
@@ -38,10 +46,10 @@ var articleOne={
         </div>
         <hr/>
         <div>
-            <h3> My First Article</h3>
+            <h3> ${heading} </h3>
         </div>
         <div>
-            Sep 7 2017
+            ${date}
         </div>
         
         <div>
@@ -52,15 +60,13 @@ var articleOne={
     </body>
     
 </html>
-            `
-    
-    
-};
+            `;
+            return htmlTemplate;
+            
+            
+                
+            }
 
-var content={
-    title: Article One;
-    heading: 
-}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
