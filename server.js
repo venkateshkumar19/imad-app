@@ -41,9 +41,8 @@ var articles=
             We travel, some of us forever, to seek other places, other lives, other souls.” <br> - Anais Nin 
             </p>
             `
-        
     },
-    'article-thre':{
+    'article-three':{
     title: 'Article Three',
     heading: 'My Third Article',
     date: 'Sep 7 2017 2:45PM',
@@ -52,12 +51,10 @@ var articles=
            <p> This is my third . Further about travel..travel.</p>
             
             <p>
-                Travel makes one modest. You see what a tiny place you occupy in the world.
-                – Gustave Flaubert
+                Travel makes one modest. You see what a tiny place you occupy in the world. By Gustave Flaubert
             </p>
             <p>
-              I am not the same, having seen the moon shine on the other side of the world.
-              – Mary Anne Radmacher
+              I am not the same, having seen the moon shine on the other side of the world. By Mary Anne Radmacher
             </p>
             `
         
@@ -109,11 +106,12 @@ var articles=
 
 
 app.get('/', function (req, res) {
-  res.send(createTemplate(articleOne));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+app.get('/:articleName', function (req, res){
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articleOne[articleName]));
 });
 
 app.get('/article-two', function(req, res){
